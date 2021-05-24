@@ -1,0 +1,17 @@
+body a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 40px;
+    width: 49%;
+    margin: auto;
+    height: 50pxpx;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-family: cursive;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+a:hover{
+    background-color: lightblue;
+}
