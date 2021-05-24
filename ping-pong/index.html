@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="index.css">
+    <title>Ping-Pong</title>
+</head>
+<body>
+    <div id="options">
+        <button id="start" onclick="Start()">Start</button>
+
+        <button id="reStart" onclick=Start()>Start Again</button>
+
+        <span>Speed</span>
+        <button id="speed" onclick=changeSpeed(1)>Up</button>
+
+        <button id="speed" onclick=changeSpeed(0)>Down</button>
+        <span id="span">1x</span>
+        <span>Left(W-S)----Right(UP DOWN)</span>
+    </div>
+
+    <div id="Nav-Box">
+        <div id="Left-Player">A</div>
+        <div id="Right-Player">B</div>
+    </div>
+    <canvas id="Game-Box" width="600" height="400">
+        
+    </canvas>
+    <div id="overlay" onclick=overlayOff()></div>
+    
+</body>
+<script type="text/javascript"   src="index.js"></script>
+</html>
