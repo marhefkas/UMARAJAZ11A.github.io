@@ -1,0 +1,146 @@
+.game-board
+{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+    background-color: rgba(33, 34, 33, 0.74);
+    color: rgb(7, 7, 7) ;
+    border: 0px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    grid-column-gap: 2.2px;
+    grid-row-gap: 2.2px;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.buttons {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: -3%;
+    
+  }
+  
+  .action_btn {
+    display: inline-block;
+    width: calc(50% - 4px);
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    font-weight: bold;
+    font-family: cursive;
+    background-color: rgb(139, 192, 162);
+    
+  }
+  .action_btn:hover{
+      background-color: cadetblue;
+      
+  }
+button{
+    color: black;
+}  
+.box
+{
+    border: 0px solid black;
+    background-color: rgb(255, 255, 255);
+    text-emphasis-color: black;
+    border-radius: 1px;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+button:hover{
+    background-color: rgb(184, 197, 159);
+}
+
+h1{
+    color: rgb(116, 116, 46);
+    font-size: 60px;
+    font-family: cursive;
+    font-style: italic;
+    text-align: center;
+  
+    text-shadow: rgb(36, 21, 1);
+
+}
+body{
+    background-color: rgb(236, 233, 195);
+    background: linear-gradient(to bottom,rgb(230, 230, 198),rgb(231, 211, 185));
+    
+
+}
+#start{
+    
+    width: 22%;
+    height: 7%;
+    border-radius: 50px;
+    background-color: rgb(201, 206, 133);
+    font-family: cursive;
+    font-weight: bold;
+    float:center;
+}
+#hin{
+    
+    width: 22%;
+    height: 7%;
+    border-radius: 50px;
+    background-color: rgb(205, 209, 149);
+    font-family: cursive;
+    font-weight: bold;
+    float:center;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  #start1{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 70px;
+    transform: translate(-50%,-50%);
+  }
+ #start:hover{
+     background-color: teal;
+ }
+ #hin:hover{
+     background-color: teal;
+ }
+
+ #hprint{
+     position: relative;
+ }
+ select{
+     background-color: rgb(228, 235, 210);
+     font-weight: lighter;
+     font-family: cursive;
+     height: 30px;
+     width: 140px;
+ }
+ form{
+     font-weight: bold;
+     font-family: sans-serif;
+     
+ }
