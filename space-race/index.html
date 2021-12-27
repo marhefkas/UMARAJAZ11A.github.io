@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Space Race</title>
+  </head>
+  <body class=" text-center">
+    <h1>Space Race!</h1>
+    <div id='overlay'> </div>
+    <div class='d-flex'>
+
+            <div class="mr-5">
+                <h3>Customize Your Rocket</h3>
+                <div class="slidecontainer d-flex ml-4 mb-5">
+                    <p class="w-25">Tip</p>
+                    <input type="range" min="1" max="100" value="40" class="slider w-25" onchange="customizeGame('tip',value)" >
+                    
+                    <p class="w-25">Arms</p>
+                    <input type="range" min="1" max="100" value="30" class="slider w-25" onchange="customizeGame('arm',value)" >
+                    
+                </div>
+                <div class="slidecontainer d-flex ml-4 mb-5">
+                    <p class="w-25">Body length</p>
+                    <input type="range" min="1" max="100" value="10" class="slider w-25" onchange="customizeGame('bodyLength',value)" >
+                    <p class="w-25">Body width</p>
+                    <input type="range" min="1" max="100" value="20" class="slider w-25" onchange="customizeGame('bodyWidth',value)"  >
+                    
+                </div>
+                <div class="slidecontainer d-flex ml-4">
+                    <p class="w-25">Booster length</p>
+                    <input type="range" min="1" max="100" value="25" class="slider w-25" onchange="customizeGame('boosterLength',value)" >
+                    <p class="w-25">Booster width</p>
+                    <input type="range" min="1" max="100" value="25" class="slider w-25"  onchange="customizeGame('boosterWidth',value)">
+                    
+                </div>
+                
+            </div>
+
+            <div>
+                    
+                <canvas id="Game-Box" width="600" height="500" class="border border-primary text-center ">
+                    
+                </canvas>
+                <br></br>
+                <button onclick="game(true)" class="btn btn-success" >Start</button>
+
+                
+            </div>
+            
+            <div class="ml-5">
+                <h3>Customize Gameplay</h3>
+                <div class="slidecontainer d-flex mr-4 mb-5">
+                    <p class="w-25">Ball Speed</p>
+                    <input type="range" min="1" max="100" value="20" class="slider w-25"  onchange="customizeGame('ballSpeed',value)">
+                    
+                    <p class="w-25">Ball Radius</p>
+                    <input type="range" min="1" max="100" value="25" class="slider w-25" onchange="customizeGame('ballRadius',value)" >
+                    
+                </div>
+                <div class="slidecontainer d-flex mr-4 mb-5">
+                    <p class="w-25">Rocket Speed</p>
+                    <input type="range" min="1" max="100" value="25" class="slider w-25" onchange="customizeGame('rocketSpeed',value)" >
+                    <p class="w-25">Game Time</p>
+                    <input type="range" min="1" max="100" value="20" class="slider w-25" onchange="customizeGame('gameTime',value)" >
+                    
+                </div>
+                <div class="slidecontainer d-flex mr-4 mb-5">
+                    <p class="w-25">Difficulty Level</p>
+                    <input type="range" min="1" max="100" value="2www0" class="slider w-25" onchange="customizeGame('difficulty',value)" >
+                    <p class="w-25">Number of Rounds</p>
+                    <input type="range" min="1" max="100" value="50" class="slider w-25" onchange="customizeGame('rounds',value)" >
+                    
+                </div>
+                
+            </div>
+    </div>
+    
+    
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  <script type="text/javascript"   src="index.js"></script>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="index.css">
+    <title>Ping-Pong</title>
+</head>
+<body>
+    <div id="options">
+        <button id="start" onclick="Start()">Start</button>
+
+        <button id="reStart" onclick=Start()>Start Again</button>
+
+        <span>Speed</span>
+        <button id="speed" onclick=changeSpeed(1)>Up</button>
+
+        <button id="speed" onclick=changeSpeed(0)>Down</button>
+        <span id="span">1x</span>
+        <span>Left(W-S)----Right(UP DOWN)</span>
+    </div>
+
+    <div id="Nav-Box">
+        <div id="Left-Player">A</div>
+        <div id="Right-Player">B</div>
+    </div>
+    <canvas id="Game-Box" width="600" height="400">
+        
+    </canvas>
+    <div id="overlay" onclick=overlayOff()></div>
+    
+</body>
+<script type="text/javascript"   src="index.js"></script>
+</html> -->
